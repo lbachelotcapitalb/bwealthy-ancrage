@@ -1,0 +1,19 @@
+{
+  "objet": "bwealthy — tête de chaîne du journal d'accès staff",
+  "produit_le": "2026-08-20T06:35:08.898Z",
+  "entrees": 10,
+  "derniere_ligne": 10,
+  "derniere_ligne_le": "2026-08-19T10:39:25.218499+00:00",
+  "tete_de_chaine_sha256": "2f3d23019f0fdc39d5ac6c69d60395d68445fab5f471bcbce8922025be4fc7c2",
+  "chaine_verifiee": true,
+  "anomalies": [],
+  "comment_verifier": [
+    "Chaque ligne du journal porte hash = sha256(prev_hash || contenu de la ligne).",
+    "Le relevé du jour J doit contenir, en préfixe, toute la chaîne du relevé J-1 :",
+    "entrees et derniere_ligne ne peuvent que CROÎTRE, et la tête publiée hier doit",
+    "rester atteignable en remontant la chaîne depuis celle d'aujourd'hui.",
+    "Une tête qui « recule », ou une chaîne qui ne contient plus la tête de la veille,",
+    "est la signature d'une réécriture — pas d'une erreur de calcul.",
+    "Source : public.verify_access_log_chain() (supabase/migrations/2026_staff_access_log.sql)."
+  ]
+}
